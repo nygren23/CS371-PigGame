@@ -60,8 +60,35 @@ public class PigHumanPlayer extends GameHumanPlayer implements OnClickListener {
      */
     @Override
     public void receiveInfo(GameInfo info) {
-        int x = 0;
-        //TODO You will implement this method to receive state objects from the game
+        if(!(info instanceof PigGameState)){
+            flash(0xFFFF0000, 10);
+            return;
+        }else{
+            playerScoreTextView.setText("" + ((PigGameState) info).getPlayer0Score());
+            oppScoreTextView.setText("" + ((PigGameState) info).getPlayer1Score());
+            turnTotalTextView.setText("" + ((PigGameState) info).getRunningTotal());
+            switch (((PigGameState) info).getDieValue()){
+                case 1:
+                    dieImageButton.setImageResource(R.drawable.face1);
+                    break;
+                case 2:
+                    dieImageButton.setImageResource(R.drawable.face2);
+                    break;
+                case 3:
+                    dieImageButton.setImageResource(R.drawable.face3);
+                    break;
+                case 4:
+                    dieImageButton.setImageResource(R.drawable.face4);
+                    break;
+                case 5:
+                    dieImageButton.setImageResource(R.drawable.face5);
+                    break;
+                case 6:
+                    dieImageButton.setImageResource(R.drawable.face6);
+                    break;
+            }
+        }
+
     }//receiveInfo
 
     /**
@@ -72,7 +99,16 @@ public class PigHumanPlayer extends GameHumanPlayer implements OnClickListener {
      * 		the button that was clicked
      */
     public void onClick(View button) {
-        //TODO  You will implement this method to send appropriate action objects to the game
+        switch(button.getId()){
+            case R.id.holdButton:
+                game.sendAction(new PigHoldAction(this));
+                break;
+            case R.id.dieButton:
+                game.sendAction(new PigRollAction(this));
+                break;
+            default:
+                break;
+        }
     }// onClick
 
     /**

@@ -57,11 +57,13 @@ public class PigLocalGame extends LocalGame {
                     pigGameState.setTurnPlayerId(0);
                 }
             }
+            pigGameState.setRunningTotal(0);
             return true;
+
         //ROLL action
         }else if(action instanceof PigRollAction){
 
-                pigGameState.setDieValue((int) (Math.random() * 7) + 1);
+                pigGameState.setDieValue((int) (Math.random() * 6) + 1);
                 if(pigGameState.getDieValue() != 1){
                     pigGameState.setRunningTotal(pigGameState.getRunningTotal() + pigGameState.getDieValue());
                 } else {
@@ -73,8 +75,11 @@ public class PigLocalGame extends LocalGame {
                     }else if (pigGameState.getTurnPlayerId() == 1){
                         pigGameState.setTurnPlayerId(0);
                     }
+
                 }
-                return true;
+
+            return true;
+
         }
         return false;
     }//makeMove
