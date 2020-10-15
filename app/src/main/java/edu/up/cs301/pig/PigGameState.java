@@ -1,5 +1,8 @@
 package edu.up.cs301.pig;
 
+import android.widget.EditText;
+
+import edu.up.cs301.game.R;
 import edu.up.cs301.game.infoMsg.GameState;
 
 public class PigGameState extends GameState {
@@ -10,12 +13,14 @@ public class PigGameState extends GameState {
     private int runningTotal;
     private int dieValue;
 
+
     public PigGameState(){
         turnPlayerId = 0;
         player0Score = 0;
         player1Score = 0;
         runningTotal = 0;
         dieValue = 0;
+
     }
 
     public PigGameState(PigGameState pgs){
@@ -65,4 +70,5 @@ public class PigGameState extends GameState {
     public void setDieValue(int dieValue) {
         this.dieValue = dieValue;
     }
+
 }

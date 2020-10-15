@@ -19,6 +19,7 @@ public class PigLocalGame extends LocalGame {
 
     PigGameState pigGameState;
 
+
     /**
      * This ctor creates a new game state
      */
@@ -43,6 +44,7 @@ public class PigLocalGame extends LocalGame {
      */
     @Override
     protected boolean makeMove(GameAction action) {
+
         //HOLD action
         if(action instanceof PigHoldAction){
             if(pigGameState.getTurnPlayerId() == 0) {
@@ -60,22 +62,23 @@ public class PigLocalGame extends LocalGame {
             pigGameState.setRunningTotal(0);
             return true;
 
+
         //ROLL action
         }else if(action instanceof PigRollAction){
 
                 pigGameState.setDieValue((int) (Math.random() * 6) + 1);
+
                 if(pigGameState.getDieValue() != 1){
                     pigGameState.setRunningTotal(pigGameState.getRunningTotal() + pigGameState.getDieValue());
                 } else {
                     pigGameState.setRunningTotal(0);
-                    if(players.length > 1){
-                         if(pigGameState.getTurnPlayerId() == 0) {
+                    if (players.length == 2) {
+                        if (pigGameState.getTurnPlayerId() == 0) {
                             pigGameState.setTurnPlayerId(1);
-                         }
-                    }else if (pigGameState.getTurnPlayerId() == 1){
-                        pigGameState.setTurnPlayerId(0);
+                        } else if (pigGameState.getTurnPlayerId() == 1) {
+                            pigGameState.setTurnPlayerId(0);
+                        }
                     }
-
                 }
 
             return true;

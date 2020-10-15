@@ -36,7 +36,7 @@ public class GameConfig {
 	private GamePlayerType[] availTypes;
 
 	/** a list of the names of each player */
-	private ArrayList<String> selNames = new ArrayList<String>();
+	public ArrayList<String> selNames = new ArrayList<String>();
 
 	/**
 	 * a list of the type of each player. Each type in the list is associated

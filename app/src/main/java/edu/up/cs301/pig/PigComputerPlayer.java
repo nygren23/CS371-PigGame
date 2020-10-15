@@ -1,6 +1,7 @@
 package edu.up.cs301.pig;
 
 import java.util.Random;
+import java.util.concurrent.TimeUnit;
 
 import edu.up.cs301.game.GameComputerPlayer;
 import edu.up.cs301.game.actionMsg.GameAction;
@@ -31,6 +32,16 @@ public class PigComputerPlayer extends GameComputerPlayer {
     @Override
     protected void receiveInfo(GameInfo info) {
         PigGameState pigGameState = new PigGameState((PigGameState) info);
+
+        //added manual sleep on current thread
+        try
+        {
+            Thread.sleep(2000);
+        }
+        catch(InterruptedException ex)
+        {
+            Thread.currentThread().interrupt();
+        }
 
         if(pigGameState.getTurnPlayerId() != this.playerNum){
             return;

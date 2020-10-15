@@ -17,6 +17,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
 import android.util.Log;
+import android.widget.EditText;
 
 /**
  * A class that knows how to play the game. The data in this class represent the
@@ -86,6 +87,7 @@ public abstract class LocalGame implements Game, Tickable {
 		// filled during the initial message-protocol between the game
 		// and players
 		this.playerNames = new String[players.length];
+
 		
 		// start the thread for this game
 		synchronized(this) {

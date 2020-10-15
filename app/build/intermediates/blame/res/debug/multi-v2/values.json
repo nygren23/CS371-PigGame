@@ -1,27 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\blake\\OneDrive\\Desktop\\UP_FROM_LAPTOP\\CS371\\Lab6\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+            "outputFile": "C:\\Users\\blake\\OneDrive\\Desktop\\Lab6-PigGame\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\blake\\OneDrive\\Desktop\\UP_FROM_LAPTOP\\CS371\\Lab6\\app\\src\\main\\res\\values\\color.xml",
-                    "from": {
-                        "startLines": "2,3,4",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "57,95,133",
-                        "endColumns": "36,36,37",
-                        "endOffsets": "89,127,166"
-                    },
-                    "to": {
-                        "startLines": "2,3,4",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "55,92,129",
-                        "endColumns": "36,36,37",
-                        "endOffsets": "87,124,162"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\blake\\OneDrive\\Desktop\\UP_FROM_LAPTOP\\CS371\\Lab6\\app\\src\\main\\res\\values\\strings.xml",
+                    "source": "C:\\Users\\blake\\OneDrive\\Desktop\\Lab6-PigGame\\app\\src\\main\\res\\values\\strings.xml",
                     "from": {
                         "startLines": "11,2,7,17,18,19,14,3,20,4,8,12,13,21,10,6,15,9,15,5",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,89,4",
@@ -38,24 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\blake\\OneDrive\\Desktop\\UP_FROM_LAPTOP\\CS371\\Lab6\\app\\src\\main\\res\\values\\dimen.xml",
-                    "from": {
-                        "startLines": "7,2,4,3,6,5",
-                        "startColumns": "4,4,4,4,4,4",
-                        "startOffsets": "314,57,168,112,262,211",
-                        "endColumns": "50,53,41,54,50,49",
-                        "endOffsets": "360,106,205,162,308,256"
-                    },
-                    "to": {
-                        "startLines": "5,6,7,8,9,10",
-                        "startColumns": "4,4,4,4,4,4",
-                        "startOffsets": "167,218,272,314,369,420",
-                        "endColumns": "50,53,41,54,50,49",
-                        "endOffsets": "213,267,309,364,415,465"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\blake\\OneDrive\\Desktop\\UP_FROM_LAPTOP\\CS371\\Lab6\\app\\src\\main\\res\\values\\styles.xml",
+                    "source": "C:\\Users\\blake\\OneDrive\\Desktop\\Lab6-PigGame\\app\\src\\main\\res\\values\\styles.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -69,6 +35,40 @@
                         "startOffsets": "1612",
                         "endColumns": "57",
                         "endOffsets": "1665"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\blake\\OneDrive\\Desktop\\Lab6-PigGame\\app\\src\\main\\res\\values\\color.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "57,95,133",
+                        "endColumns": "36,36,37",
+                        "endOffsets": "89,127,166"
+                    },
+                    "to": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,92,129",
+                        "endColumns": "36,36,37",
+                        "endOffsets": "87,124,162"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\blake\\OneDrive\\Desktop\\Lab6-PigGame\\app\\src\\main\\res\\values\\dimen.xml",
+                    "from": {
+                        "startLines": "7,2,4,3,6,5",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "314,57,168,112,262,211",
+                        "endColumns": "50,53,41,54,50,49",
+                        "endOffsets": "360,106,205,162,308,256"
+                    },
+                    "to": {
+                        "startLines": "5,6,7,8,9,10",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "167,218,272,314,369,420",
+                        "endColumns": "50,53,41,54,50,49",
+                        "endOffsets": "213,267,309,364,415,465"
                     }
                 }
             ]

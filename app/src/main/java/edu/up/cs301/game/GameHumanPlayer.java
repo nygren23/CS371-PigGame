@@ -12,9 +12,11 @@ import edu.up.cs301.game.util.GameTimer;
 import edu.up.cs301.game.util.MessageBox;
 import edu.up.cs301.game.util.Tickable;
 
+import android.annotation.TargetApi;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Handler;
 import android.util.Log;
 import android.view.View;
@@ -185,6 +187,7 @@ public abstract class GameHumanPlayer implements GamePlayer, Tickable {
 	 * 			the (int representation) of the background color,
 	 * 			or "transparent" if the color could not be deduced
 	 */
+	@TargetApi(Build.VERSION_CODES.HONEYCOMB)
 	private static int getBackgroundColor(View v) {
 		 int color = Color.TRANSPARENT;
          Drawable background = v.getBackground();
@@ -342,5 +345,8 @@ public abstract class GameHumanPlayer implements GamePlayer, Tickable {
 		// by default, do nothing
 	}
 
+	public String getName() {
+		return name;
+	}
 }// class GameHumanPlayer
 

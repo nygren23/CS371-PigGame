@@ -8,6 +8,8 @@ import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.Menu;
@@ -70,6 +72,9 @@ View.OnClickListener {
 	// whether the game is in the "configuration" stage, before the actual game
 	// has started
 	private boolean doingConfiguration = true;
+
+
+
 
 	/**
 	 * contains the game configuration this activity will be used to initialize
@@ -142,6 +147,26 @@ View.OnClickListener {
 
 		// Initialize the layout
 		setContentView(R.layout.game_config_main);
+/*
+
+		//TODO use turn counter changing to 0 as indicator of turn change
+		//
+		EditText turnValue = findViewById(R.id.turnTotalValue);
+		turnValue.setEnabled(false);
+		turnValue.addTextChangedListener(new TextWatcher() {
+
+			public void afterTextChanged(Editable s) { }
+
+			public void beforeTextChanged(CharSequence s, int start,
+										  int count, int after) { }
+
+			public void onTextChanged(CharSequence s, int start,
+									  int before, int count) {
+				Log.i("value changed", "" + s);
+			}
+		});
+*/
+
 
 		// create the default configuration for this game
 		this.config = createDefaultConfig();
@@ -256,6 +281,8 @@ View.OnClickListener {
 	 */
 	private final String launchGame(GameConfig config) {
 
+
+
 		// Set the title text with the game's name
 		this.setTitle(config.getGameName());
 
@@ -269,6 +296,7 @@ View.OnClickListener {
 				return "Game creation failed.";
 			}
 		}
+
 
 		//////////////////////////////////////
 		// create the players
@@ -805,5 +833,10 @@ View.OnClickListener {
 	public void doFinish(View v) {
 		finish();
 	}
+
+	public GamePlayer[] getPlayers() {
+		return players;
+	}
+
 }
 

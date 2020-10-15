@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\blake\\OneDrive\\Desktop\\UP_FROM_LAPTOP\\CS371\\Lab6\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v11\\values-v11.xml",
+            "outputFile": "C:\\Users\\blake\\OneDrive\\Desktop\\Lab6-PigGame\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v11\\values-v11.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\blake\\OneDrive\\Desktop\\UP_FROM_LAPTOP\\CS371\\Lab6\\app\\src\\main\\res\\values-v11\\styles.xml",
+                    "source": "C:\\Users\\blake\\OneDrive\\Desktop\\Lab6-PigGame\\app\\src\\main\\res\\values-v11\\styles.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
